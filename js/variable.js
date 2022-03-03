@@ -1,65 +1,94 @@
-console.log("Hello Word")
-// document.write("contenido para insertar en mi HTML");
-// alert("Este es un alerta generado desde Jav Script")
-var nombre1 = "Jose Miguel Perez del Valle Nacido";
+// console.log('Hello World')
+// document.write('Contenido para insertar en mi HTML');
+var nombre1 = "Jose Miguel Pérez del Valle Nacido";
 var nombre2
-const nombre3 ="Jose Constante";
-let nombre4 = "Jose Local";
+const user = 'Jose Alberto User Doe';
+let nombre4 = "Jose Constantine";
+
+// Reasignamos el valor siempre y cuando la variable sea inicializada como var o let
+nombre4 = "JOSE CONSTANTINE";
+
+const saludo = "Bienvenid@ de nuevo " + nombre4;
+console.log(saludo)
+
 
 let numero = 24
-let numero1 = ("25")
+const costoPrenda = 4500;
+const iva = 1.21;
+const recargoTarjeta = 1.35;
 
-console.log(numero + 3)
-console.log(numero1 + 3)
 
 const allowedToAccess = true;
 
+let valorPrenda = costoPrenda * iva;
+
+valorPrenda = valorPrenda * recargoTarjeta; 
+
+console.log("Valor de la prenda $" +  valorPrenda);
+
 // ARRAYS
+let paisesLationamerica = ["Argentina", "Brasil", "Bolivia", "Paraguay", "Peru", "Chile", "Colombia", "Uruguay"];
 
-let paisesLationoamerica = ["Argentina", "Brasil", "Chile" , "Uruguay", "Peru"]
 
-let listadoDeValoresMixtos = ["Jose", 20, "Amado", true, 1987, "velez", 1.20, "Tucuman"]
+let usuarioAsArray = 
+    [20, "Amado", true, "Jose", 1987, false, 1.20, "Argentina", "Tucuman", "Velez"]
 
-console.log(listadoDeValoresMixtos)
+console.log('El equipo de ' + usuarioAsArray[0] + ' es ' + usuarioAsArray[5])
 
-// para acceder a un valor en particular 
-console.log(listadoDeValoresMixtos[4])  
-
-console.log("El equipo de " + listadoDeValoresMixtos[0] + " es " + listadoDeValoresMixtos[5])
-
-// OBJETOS
-let persona = {
-    name: "JoseObj", 
-    lastname: "Amado",
+//OBJETOS
+let usuario = {
+    name: "JoseObj",
+    lastName: "Amado",
     age: 20,
+    team: "Velez",
     isActive: true,
     bornDate: 1987,
+    pets: ['Oreo', 'Kaiser'],
     isSuscribed: false,
-    discount: 1.2,
+    discount: 1.20,
     country: "Argentina",
     state: "Tucuman",
-    team: "Velez",
+    adress: {
+        street: 'Irene Curie',
+        street_number: 123,
+        city: 'San Rafael'
+    }
 }
-console.log(persona.name)
-console.log(persona.age)
-console.log(persona["age"])
+console.log(usuario.pets);
+console.log(usuario.adress.city)
+console.log(usuario['adress']['city'])
 
-console.log("Objeto: El equito de" + persona.name + " es " + persona.team)
 
-let alumnosArray = [
-    "Argumedo",
-    "Benitez",
-    "Contreras",
-]
-console.log(alumnosArray[0]);
 
-// FORMA COMBINADA
+
+
+
+// console.log("OBJETO: El equipo de " + usuario.name + " es " + usuario.team);
+
+// let alumnosArray = [
+//     ["Benitez", [10, 20], "FullStack"],
+//     "Contreras"
+// ]
+
+// console.log(alumnosArray[0]);
+// alumnosArray[0] = 10;
+// console.log(alumnosArray);
+
 let alumnos = [
-    {fullName: "Argumedo Roberto", course: "FullStack", notas:[10, 20]},
-    {fullName: "Benitez Pablo", course: "FullStack", notas:[10, 20]},
-    {fullName: "Contreras Sergio", course: "React Avanzado", notas:[10, 20]},
+    { fullName: "Argumedo Roberto", course: "FullStack", notas: [10, 20]  },
+    { fullName: "Benitez Pablo", course: "FullStack", notas: []  },
+    { fullName: "Contreras Sergio", course: "React Avanzado", notas: [10, 20]  },
 ];
 
-alumnos[1].notas[2] = 15; 
-alumnos[1].notas.push = 15;
+const nuevoAlumno = { fullName: "Lorena Cobos", course: "Marketing", notas: []  };
+
 console.log(alumnos)
+alumnos.push(nuevoAlumno)
+console.log(alumnos)
+// alumnos[1].notas.push(15);
+
+// // { fullName: "Benitez Pablo", course: "FullStack", notas: [10, 20]  }
+// console.log(alumnos)
+
+// console.log(listadoDeValoresMixtos.length);
+// console.log(listadoDeValoresMixtos[4]);
