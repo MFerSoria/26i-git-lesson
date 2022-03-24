@@ -176,5 +176,4 @@ const paisesObject = [
         name: 'Uruguay',
         year: 1930
     },
-]
-
+];
